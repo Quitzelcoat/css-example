@@ -1,0 +1,54 @@
+body {
+  background-color: rgb(34, 18, 46);
+  color: rgb(237, 255, 213);
+  overflow: hidden;
+}
+
+/* 
+p {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: slidein;
+
+  OR
+  animation: 3s infinite alternate slidein;
+  }
+*/
+
+p {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+p span {
+  display: inline-block;
+  animation-duration: 3s;
+  animation-name: growshrink;
+}
+
+@keyframes slidein {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+@keyframes growshrink {
+  25%,
+  75% {
+    scale: 100%;
+  }
+
+  50% {
+    scale: 200%;
+    color: magenta;
+  }
+}
